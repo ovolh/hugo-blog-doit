@@ -1,22 +1,22 @@
 ---
 title: "(2020/9/11 更新) 常用 Laravel 开发扩展包"
-date: 2020-09-08T13:32:46+08:00
-lastmod: 2020-09-11T10:16:26+08:00
+date: 2020-09-08 17:20:17
+lastmod: 2022-06-07T10:16:26+08:00
 draft: false
-tags: ["Laravel", "Laradock", "npm", "cnpm", "ubuntu"]
-categories: ["PHP", "Laravel"]
-featuredImage: "https://cdn.jsdelivr.net/gh/ibyond/CDN/posts/20200908/composer.jpg"
-featuredImagePreview: "https://cdn.jsdelivr.net/gh/ibyond/CDN/posts/20200908/composer.jpg"
-description: 记录开发过程中常使用的扩展包，包含文档和使用案例，日后会结合扩展的流行程度和替代方案，删除或添加扩展，不定时更新。
+description: "日常使用的扩展我经常容易忘记，所以写这篇文章来记录常用的包，看扩展的流行程度和替代方案，会删除或添加扩展，会保持更新。"
+tags: [Larave, Laradock]
+featured_image: "composer.jpg"
+categories: [PHP, Laravel]
+comment : true
+disableToC: false
 ---
-<!--more-->
 
-## 前言
-记录开发过程中常使用的扩展包，包含文档和使用案例，日后会结合扩展的流行程度和替代方案，删除或添加扩展，不定时更新。
+# 前言
+日常使用的扩展我经常容易忘记，所以写这篇文章来记录常用的包，看扩展的流行程度和替代方案，会删除或添加扩展，会保持更新。
 
-## 扩展列表
+# 扩展列表
 
-### 开发者工具
+## 开发者工具
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
@@ -24,7 +24,7 @@ description: 记录开发过程中常使用的扩展包，包含文档和使用�
 | 2     | [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server) | 将Symfony Var-Dump 服务器带到 Laravel |[官方文档](https://beyondco.de/docs/laravel-dump-server/installation)|
 | 3     | [overtrue/laravel-query-logger](https://github.com/overtrue/laravel-query-logger) |  用于记录Laravel应用程序的所有查询 |[官方文档](https://github.com/overtrue/laravel-query-logger)|
 
-### 测试 & 调试
+## 测试 & 调试
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
@@ -32,7 +32,7 @@ description: 记录开发过程中常使用的扩展包，包含文档和使用�
 
 
 
-### 授权 & 认证
+## 授权 & 认证
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
@@ -42,7 +42,7 @@ description: 记录开发过程中常使用的扩展包，包含文档和使用�
 | 4     | [overtrue/socialite](https://github.com/overtrue/socialite) | OAuth2 认证工具 |[官方文档](https://github.com/overtrue/socialite)|
 | 5     | [socialiteproviders/xxx](https://github.com/SocialiteProviders/Providers) | 提供各种身份验证 |[官方文档](https://socialiteproviders.com/)|
 
-### 其它有用的利器
+## 其它有用的利器
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
@@ -50,39 +50,39 @@ description: 记录开发过程中常使用的扩展包，包含文档和使用�
 | 2     | [elasticsearch/elasticsearch](https://github.com/elastic/elasticsearch-php) |  Elasticsearch |[中文文档](https://learnku.com/docs/elasticsearch-php/6.0)|
 
 
-### 媒体 & 文档管理
+## 媒体 & 文档管理
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 
 
-### 集成 JavaScript
+## 集成 JavaScript
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 
 
-### 数据库/ORM/迁移/填充
+## 数据库/ORM/迁移/填充
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 
 
-### 搜索
+## 搜索
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 | 1     | [vanry/laravel-scout-tntsearch](https://github.com/vanry/laravel-scout-tntsearch) |  TNTSearch |[laravel下TNTSearch+jieba-php实现中文全文搜索](https://baijunyao.com/article/154)|
 | 2     | [baijunyao/laravel-scout-elasticsearch](https://github.com/baijunyao/laravel-scout-elasticsearch/tree/v3.0.1) |  TNTSearch |[laravel下elasticsearch+analysis-ik实现中文全文搜索](https://baijunyao.com/article/156)|
 
-### API
+## API
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 | 1     | [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth) | 常用于实现API用户认证 |[JWT 超详细分析](https://learnku.com/articles/17883) <br>[官方文档](https://jwt-auth.readthedocs.io/en/develop/) <br>[Laravel JWT 多表多用户登录](https://learnku.com/articles/30342) <br> [Laravel jwt 多表（多用户端）验证隔离](https://learnku.com/articles/28881)|
 
 
-### 后台模板
+## 后台模板
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
@@ -90,37 +90,37 @@ description: 记录开发过程中常使用的扩展包，包含文档和使用�
 | 2     | [dcat/laravel-admin](https://github.com/jqhph/dcat-admin) |  基于laravel-admin二次开发而成的后台系统构建工具 |[官方文档](http://www.dcatadmin.com/)|
 
 
-### 任务/命令/调度
+## 任务/命令/调度
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 
 
-### 电子商务
+## 电子商务
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 
 
-### 支付
+## 支付
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 | 1     | [yansongda/laravel-pay](https://github.com/yansongda/laravel-pay) |  最优雅的 Alipay 和 WeChat 的支付 SDK 扩展包 |[官方文档](https://pay.yanda.net.cn/docs/2.x/)|
 
-### 队列 & 消息
+## 队列 & 消息
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 
 
-### 性能优化
+## 性能优化
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
 
 
-### 本地化
+## 本地化
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
@@ -128,7 +128,7 @@ description: 记录开发过程中常使用的扩展包，包含文档和使用�
 | 2     | [overtrue/laravel-pinyin](https://github.com/overtrue/laravel-pinyin) | 中文转拼音工具 |[官方文档](https://github.com/overtrue/pinyin)|
 
 
-### 第三方服务集成
+## 第三方服务集成
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |
@@ -137,7 +137,7 @@ description: 记录开发过程中常使用的扩展包，包含文档和使用�
 
 
 
-### 本地开发
+## 本地开发
 
 | 序号   | 名称                        | 描述             | 用例链接   |
 | ----  | ---------                   | ----             | ----      |

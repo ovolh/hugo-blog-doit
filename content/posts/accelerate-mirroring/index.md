@@ -1,67 +1,87 @@
 ---
-title: "加速镜像"
-date: 2020-09-17T17:20:12+08:00
-lastmod: 2021-09-16T10:16:26+08:00
+title: "加速镜像（2022/06/07更新）"
+date: 2020-09-17 17:20:48
+lastmod: 2022-06-07T10:16:26+08:00
 draft: false
-tags: ["Composer", "Yarn", "npm", "cnpm", "ubuntu"]
-categories: ["PHP", "Nodejs", "Ubuntu"]
-featuredImage: "https://cdn.jsdelivr.net/gh/ibyond/CDN/posts/20200917/composer.jpg"
-featuredImagePreview: "https://cdn.jsdelivr.net/gh/ibyond/CDN/posts/20200917/composer.jpg"
-
+description: "由于众所周知的原因，很多软件默认的都是国外的镜像，导致在国内访问速度缓慢，所以有必要切换到国内的镜像以达到加速的目的，特记录下日常所用到的加速镜像。"
+tags: [Composer, Yarn, npm, ubuntu]
+categories: [PHP, Nodejs]
+comment : true
+toc: true
+resources:
+- name: featured-image
+  src: composer.jpg
+- name: featured-image-preview
+  src: composer.jpg
 ---
 
-由于总所周知的原因，很多软件默认的都是国外的镜像，导致在国内访问速度缓慢，所以有必要切换到国内的镜像以达到加速目的。记录下日常所用到的加速镜像，以便日后要用到时快速查找设置。
-<!--more-->
-## composer 加速
+# 加速镜像
 
+由于众所周知的原因，很多软件默认的都是国外的镜像，导致在国内访问速度缓慢，所以有必要切换到国内的镜像以达到加速的目的，特记录下日常所用到的加速镜像。
+
+## composer 加速
 ```composer
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 
 ## npm 加速
 
+http://npm.taobao.org 和 http://registry.npm.taobao.org 将在 2022.06.30 号正式下线和停止 DNS 解析。
+新域名为 npmmirror.com, 相关服务域名切换规则请参考：
+```
+http://npm.taobao.org => http://npmmirror.com
+http://registry.npm.taobao.org => http://registry.npmmirror.com
+```
+
 ```npm
-npm config set registry http://registry.npm.taobao.org
+npm config set registry http://registry.npmmirror.com
 ```
 
 ## yarn 加速
-
 ```yarn
-yarn config set registry https://registry.npm.taobao.org
+yarn config set registryhttp://registry.npmmirror.com
 ```
 
 ## cnpm 加速
-
 ```cnpm
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm install -g cnpm --registry=http://registry.npmmirror.com
+```
+
+## golang 加速镜像
+可用镜像：
+```
+https://goproxy.cn
+https://goproxy.io
+https://mirrors.aliyun.com/goproxy/
+```
+设置
+
+```
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
 ## 阿里云 Ubuntu 镜像
-
-首先，备份并编辑 /etc/apt/sources.list 文件（此处使用 Vim ，你也可以选用其他编辑器）：
-```shell script
-$ cp /etc/apt/sources.list /etc/apt/sources.list.bak
+首先，编辑我们的 /etc/apt/sources.list 文件（此处使用 Vim ，你也可以选用其他编辑器）：
+```
 $ vim /etc/apt/sources.list
 ```
 替换默认的 `http://archive.ubuntu.com/` 为 `mirrors.aliyun.com`
 
 Vim 替换指令为：
-
-```shell script
+```
 :%s/archive.ubuntu.com/mirrors.aliyun.com/g
 :%s/security.ubuntu.com/mirrors.aliyun.com/g
 ```
 然后使用 :wq 保存并退出。
 
 接下来，我们需要刷新软件源：
-
-```shell
+```
 $ apt update
 $ apt upgrade
 ```
 ### Ubuntu 14.04.5 LTS 配置如下
-
-```shell
+```
 deb https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb-src https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
@@ -79,8 +99,7 @@ deb-src https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted univ
 ```
 
 ### ubuntu 16.04 配置如下
-
-```shell
+```
 deb http://mirrors.aliyun.com/ubuntu/ xenial main
 deb-src http://mirrors.aliyun.com/ubuntu/ xenial main
 
@@ -99,8 +118,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security universe
 
 ```
 ### ubuntu 18.04(bionic) 配置如下
-
-```shell
+```
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 
@@ -118,8 +136,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 
 ```
 ### ubuntu 20.04(focal) 配置如下
-
-```shell
+```
 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
 
@@ -137,19 +154,9 @@ deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted univer
 
 ```
 
-## Docker 镜像加速
-
-国内从 Docker Hub 拉取镜像有时会遇到困难，此时可以配置镜像加速器。国内很多云服务商都提供了国内加速器服务，例如：
-
-* [阿里云加速器(点击管理控制台 -> 登录账号(淘宝账号) -> 右侧镜像工具 -> 镜像加速器 -> 复制加速器地址)](https://www.aliyun.com/product/acr?source=5176.11533457&userCode=8lx5zmtu)
-* [网易云加速器 https://hub-mirror.c.163.com](https://www.163yun.com/help/documents/56918246390157312)
-* [百度云加速器 https://mirror.baidubce.com](https://cloud.baidu.com/doc/CCE/s/Yjxppt74z#%E4%BD%BF%E7%94%A8dockerhub%E5%8A%A0%E9%80%9F%E5%99%A8)
-
-**由于镜像服务可能出现宕机，建议同时配置多个镜像。各个镜像站测试结果请到 docker-practice/docker-registry-cn-mirror-test 查看。**
-
->国内各大云服务商（腾讯云、阿里云、百度云）均提供了 Docker 镜像加速服务，建议根据运行 Docker 的云平台选择对应的镜像加速服务。
-
 ## 相关链接
-1. Ubuntu 镜像 : [https://developer.aliyun.com/mirror/ubuntu](https://developer.aliyun.com/mirror/ubuntu)
-2. Docker -- 从入门到实践 ：[https://yeasy.gitbook.io](https://yeasy.gitbook.io/docker_practice/install/mirror)
+1. [阿里云 镜像](https://developer.aliyun.com/mirror/?spm=a2c6h.265751.J_5404914170.29.728e759bS5Tzwy)
+2. [Ubuntu 镜像](https://developer.aliyun.com/mirror/ubuntu)
+3. [阿里云 Composer 全量镜像](https://developer.aliyun.com/composer)
+
 

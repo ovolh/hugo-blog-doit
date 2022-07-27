@@ -27,6 +27,8 @@ images: []
 tags: []
 categories: []
 series: []
+series_weight: 1
+seriesNavigation: true
 featuredImage: ""
 featuredImagePreview: ""
 
@@ -38,6 +40,9 @@ ruby: true
 fraction: true
 fontawesome: true
 linkToMarkdown: true
+linkToSource: false
+linkToEdit: false
+linkToReport: false
 rssFullText: false
 
 toc:
@@ -45,6 +50,9 @@ toc:
   auto: true
 code:
   copy: true
+  # ...
+table:
+  sort: true
   # ...
 math:
   enable: true
@@ -72,6 +80,12 @@ library:
 seo:
   images: []
   # ...
+outdatedArticleReminder:
+  enable: false
+  # ...
+sponsor:
+  enable: false
+  # ...
 ---
 ```
 
@@ -88,6 +102,8 @@ seo:
 * **tags**: 文章的标签.
 * **categories**: 文章所属的类别.
 * **series**: {{< version 0.2.12 >}} 文章所属的系列.
+* **series_weight**: {{< version 0.2.13 >}} 自定义文章在系列中的[位置](https://gohugo.io/content-management/taxonomies/#order-taxonomies).
+* **seriesNavigation**: {{< version 0.2.13 >}} 是否使用系列导航.
 * **featuredImage**: 文章的特色图片.
 * **featuredImagePreview**: 用在主页预览的文章特色图片.
 
@@ -99,14 +115,38 @@ seo:
 * **fraction**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [分数扩展语法](#fraction).
 * **fontawesome**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [Font Awesome 扩展语法](#fontawesome).
 * **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接.
+* **linkToSource**: {{< version 0.2.14 >}} 如果设为 `false`, 则关闭页脚 **view source** 的链接. 你可以将其设置为一个指向文章原始文件的链接. 使用魔法变量 `{path}` 来获取文章的相对路径, 这篇文章的 `{path}` 是 `posts/theme-documentation-content/index.en.md`.
+* **linkToEdit**:{{< version 0.2.13 >}} 如果设为 `false`, 则关闭页脚 **编辑此页** 的链接. 你可以将其设置为一个用于编辑这个页面的链接. 使用魔法变量 `{path}` 来获取这篇文章的相对路径, 这篇文章的 `{path}` 是 `posts/theme-documentation-content/index.zh-cn.md`.
+* **linkToReport**: {{< version 0.2.14 >}} 如果设为 `false`, 则关闭页脚 **报告问题** 的链接. 你可以将其设置为一个用于报告此页面中错误的链接. 使用魔法变量 `{path}` 来获取文章的相对路径, 这篇文章的 `{path}` 是 `posts/theme-documentation-content/index.en.md`, 使用 `{title}` 来获取文章的标题, 这篇文章的 `{title}` 为 `Theme Documentation - Content`, 使用 `{url}` 来获取文章的链接, 这篇文章的 `{url}` 为 `https://hugodoit.pages.dev/theme-documentation-content/`.
 * **rssFullText**: {{< version 0.2.4 >}} 如果设为 `true`, 在 RSS 中将会显示全文内容.
 * **pageStyle**: {{< version 0.2.11 >}} 调整页面样式, 可选择"normal"或"wide".
+* **license**: {{< version 0.2.14 >}} 许可协议信息 (支持 HTML 格式).
 
 * **toc**: {{< version 0.2.9 changed >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.toc` 部分相同.
 * **code**: {{< version 0.2.0 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.code` 部分相同.
+* **table**: {{< version 0.2.14 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.table` 部分相同.
 * **math**: {{< version 0.2.0 changed >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.math` 部分相同.
 * **mapbox**: {{< version 0.2.0 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.mapbox` 部分相同.
 * **share**: 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.share` 部分相同.
 * **comment**: {{< version 0.2.0 changed >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.comment` 部分相同.
 * **library**: {{< version 0.2.7 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.library` 部分相同.
 * **seo**: {{< version 0.2.10 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.seo` 部分相同.
+* **outdatedArticleReminder**: {{< version 0.2.13 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.outdatedArticleReminder` 部分相同.
+* **sponsor**: {{< version 0.2.13 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.sponsor` 部分相同.
+
+{{< admonition tip >}}
+{{< version 0.2.10 >}}
+
+**featuredImage** 和 **featuredImagePreview** 支持[本地资源引用](#contents-organization)的完整用法.
+
+如果带有在前置参数中设置了 `name: featured-image` 或 `name: featured-image-preview` 属性的页面资源,
+没有必要在设置 `featuredImage` 或 `featuredImagePreview`:
+
+```yaml
+resources:
+- name: featured-image
+  src: featured-image.jpg
+- name: featured-image-preview
+  src: featured-image-preview.jpg
+```
+{{< /admonition >}}

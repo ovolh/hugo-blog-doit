@@ -4,11 +4,13 @@ date: 2020-11-30 16:50:01
 lastmod: 2022-06-07T10:16:26+08:00
 draft: false
 description: "记录下如何一步一步的打造属于自己的 Terminal，你如果想和我一样，直接 cv 大法 就可以搞一套一样的。"
-tags: [iTerm2, zsh]
-featured_image: "ohmyzsh.jpg"
-categories: [工具]
-comment : true
-disableToC: false
+tags: ["iTerm2", "zsh"]
+categories: ["工具"]
+resources:
+- name: featured-image
+  src: ohmyzsh.jpg
+- name: featured-image-preview
+  src: ohmyzsh.jpg
 ---
 
 记录下如何一步一步的打造属于自己的 Terminal，你如果想和我一样，直接 cv 大法 就可以搞一套一样的。

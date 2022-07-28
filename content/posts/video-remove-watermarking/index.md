@@ -4,11 +4,14 @@ date: 2020-10-12 10:35:39
 lastmod: 2022-06-07T10:16:26+08:00
 draft: false
 description: "r抖音视频去水印的实现原理和 php 的实现方式，附各种视频去水印的 composer 扩展包"
-tags: [PHP, 去水印]
+tags: ["PHP", "去水印"]
 featured_image: "douyin.jpg"
-categories: [PHP]
-comment : true
-disableToC: false
+categories: ["PHP"]
+resources:
+- name: featured-image
+  src: douyin.jpg
+- name: featured-image-preview
+  src: douyin.jpg
 ---
 
 # 原理

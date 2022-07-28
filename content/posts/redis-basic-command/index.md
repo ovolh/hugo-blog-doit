@@ -4,11 +4,14 @@ date: 2020-09-29 14:57:17
 lastmod: 2022-06-07T10:16:26+08:00
 draft: false
 description: "redis 基础命令简单操作指南，方便以后查阅"
-tags: [Redis]
+tags: ["Redis"]
 featured_image: "redis.png"
-categories: [Redis]
-comment : true
-disableToC: false
+categories: ["Redis"]
+resources:
+- name: featured-image
+  src: redis.png
+- name: featured-image-preview
+  src: redis.png
 ---
 
 > 转载自：[finecho](https://learnku.com/blog/Lhao) 的 [Redis 基础学习](https://learnku.com/articles/24802)

@@ -4,11 +4,13 @@ date: 2020-09-08 17:20:17
 lastmod: 2022-06-07T10:16:26+08:00
 draft: false
 description: "日常使用的扩展我经常容易忘记，所以写这篇文章来记录常用的包，看扩展的流行程度和替代方案，会删除或添加扩展，会保持更新。"
-tags: [Larave, Laradock]
-featured_image: "composer.jpg"
-categories: [PHP, Laravel]
-comment : true
-disableToC: false
+tags: ["Larave", "Laradock"]
+categories: ["PHP", "Laravel"]
+resources:
+- name: featured-image
+  src: composer.jpg
+- name: featured-image-preview
+  src: composer.jpg
 ---
 
 # 前言

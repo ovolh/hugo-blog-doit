@@ -1,17 +1,13 @@
 ---
-title: "关于本站"
-date: 
+title: ""
+date: 2020-03-04T15:58:26+08:00
+lastmod: 2020-03-04T15:58:26+08:00
 draft: false
-featured_image: "about.jpg"
-comment : true
-disableToC: false
+lightgallery: true
 ---
 
-```
-Stay Hungry, Stay Foolish.
-——— Whole Earth Catalog
-```
-
+> Stay Hungry, Stay Foolish.
+> ——— Whole Earth Catalog
 
 # 关于自己
 
@@ -22,9 +18,10 @@ Address: FuZhou
 Github: https://github.com/ovolh
 Blog: https://ovolh.com/
 ```
+
 # 关于本站
 - 我是本站的站长 —— 非零，很高兴能在这里遇见你。以后的日子里就请多多关照啦。
-- 本站是使用 Hugo 搭建的静态博客，主题采用的是 [Rise](https://risehere.net/) 开发的 [Diary](https://github.com/amazingrise/hugo-theme-diary) 主题。
+- 本站是使用 Hugo 搭建的静态博客，主题采用的是 [HEIGE-PCloud](https://github.com/HEIGE-PCloud) 开发的 [DoIt](https://github.com/HEIGE-PCloud/DoIt) 主题。
 - <span style="color:red" >本博客属于纯技术博客，立足于[《中华人民共和国网络安全法》](https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B3%95/16842982)，只分享技术，不搞骇客，不搞黑产，不做违法乱纪的事情。</span>
 
 ## 本站宗旨

@@ -83,14 +83,14 @@ enableEmoji = true
 #        url = "/authors/"
 #        title = ""
 #        weight = 5
-      [[languages.zh-cn.menu.main]]
-        identifier = "showcase"
-        pre = ""
-        post = ""
-        name = "作品"
-        url = "/showcase/"
-        title = ""
-        weight = 6
+#      [[languages.zh-cn.menu.main]]
+#        identifier = "showcase"
+#        pre = ""
+#        post = ""
+#        name = "作品"
+#        url = "/showcase/"
+#        title = ""
+#        weight = 6
 #      [[languages.zh-cn.menu.main]]
 #        identifier = "documentation"
 #        pre = ""
@@ -194,7 +194,7 @@ enableEmoji = true
           disclaimer = ""
         # 主页文章列表
         [languages.zh-cn.params.home.posts]
-          enable = false
+          enable = true
           # 主页每页显示文章数量
           paginate = 7
       # 主页的社交信息设置
@@ -384,7 +384,7 @@ enableEmoji = true
     # recently updated posts settings
     # 最近更新文章设置
     [params.section.recentlyUpdated]
-      enable = true
+      enable = false
       rss = true
       days = 30
       maxCount = 10

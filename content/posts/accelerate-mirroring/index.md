@@ -4,8 +4,10 @@ date: 2020-09-17 17:20:48
 lastmod: 2022-06-07T10:16:26+08:00
 draft: false
 description: "由于众所周知的原因，很多软件默认的都是国外的镜像，导致在国内访问速度缓慢，所以有必要切换到国内的镜像以达到加速的目的，特记录下日常所用到的加速镜像。"
-tags: [Composer, Yarn, npm, ubuntu]
-categories: [PHP, Nodejs]
+tags: ["Composer", "Yarn", "npm", "ubuntu"]
+categories: ["PHP", "Nodejs"]
+authors: ["IByond", "OvOLH"]
+series: ["codding", "daliy-life"]
 comment : true
 toc: true
 resources:

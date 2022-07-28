@@ -4,8 +4,9 @@ date: 2020-11-30 16:50:01
 lastmod: 2022-06-07T10:16:26+08:00
 draft: false
 description: "记录下如何一步一步的打造属于自己的 Terminal，你如果想和我一样，直接 cv 大法 就可以搞一套一样的。"
-tags: ["iTerm2", "zsh"]
+tags: ["iTerm2", "oh-my-zsh"]
 categories: ["工具"]
+series: ["codding"]
 resources:
 - name: featured-image
   src: ohmyzsh.jpg
@@ -15,19 +16,19 @@ resources:
 
 记录下如何一步一步的打造属于自己的 Terminal，你如果想和我一样，直接 cv 大法 就可以搞一套一样的。
 
-# 安装 zsh
+## 安装 zsh
 ```
 mac: brew install zsh
 ubuntu: apt install zsh
 ```
 
-# 安装 oh my zsh
+## 安装 oh my zsh
 ```
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-# 切换主题 
+## 切换主题 
 ```
 vim ./zshrc
 # 在文件里找到 plugins 添加
@@ -43,9 +44,9 @@ vim ou.zsh-theme
 %{$fg[green]%}%m \
 
 ```
-# 安装 zsh 插件
+## 安装 zsh 插件
 
-## Zsh 命令自动补全插件 zsh-autosuggestions
+### Zsh 命令自动补全插件 zsh-autosuggestions
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -54,7 +55,7 @@ vim ./zshrc
 plugins=(zsh-autosuggestions)
 ```
 
-## 语法高亮 zsh-syntax-highlighting
+### 语法高亮 zsh-syntax-highlighting
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
@@ -62,7 +63,7 @@ vim ./zshrc
 # 在文件里找到 plugins 添加
 plugins=( zsh-syntax-highlighting)
 ```
-## autojump
+### autojump
 ```
 # ------ mac -----
 brew install autojump
@@ -89,7 +90,7 @@ plugins=(autojump)
 source ~/.zshrc
 
 ```
-# 安装字体
+## 安装字体
 ```
 # git clone
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -100,15 +101,15 @@ cd fonts
 cd ..
 rm -rf fonts
 ```
-# 更新
+## 更新
 ```
 omz update
 ```
-# 卸载
+## 卸载
 ```
 uninstall_oh_my_zsh
 ```
-# 参考链接
+## 参考链接
 
 1. https://juejin.cn/post/6844904178075058189
 

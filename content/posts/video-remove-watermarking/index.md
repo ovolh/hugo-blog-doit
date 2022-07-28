@@ -4,9 +4,10 @@ date: 2020-10-12 10:35:39
 lastmod: 2022-06-07T10:16:26+08:00
 draft: false
 description: "r抖音视频去水印的实现原理和 php 的实现方式，附各种视频去水印的 composer 扩展包"
-tags: ["PHP", "去水印"]
+tags: ["去水印"]
 featured_image: "douyin.jpg"
 categories: ["PHP"]
+series: ["codding"]
 resources:
 - name: featured-image
   src: douyin.jpg
@@ -14,19 +15,19 @@ resources:
   src: douyin.jpg
 ---
 
-# 原理
+## 原理
 
-## 播放地址
+### 播放地址
 `https://aweme.snssdk.com/aweme/v1/playwm/?video_id=...`
-## 无水印地址
+### 无水印地址
 `https://aweme.snssdk.com/aweme/v1/play/?video_id=...`
-## 区别
+### 区别
 参数 `paly` / `playwm`
 wm: water mark 的缩写
-## 注意
+### 注意
 抖音对 PC 做了限制，现在只有模拟手机发送请求才可以实现无水印播放。
 
-# 代码简单实现
+## 代码简单实现
 
 ```php
 /**
@@ -77,6 +78,6 @@ function curl_http_exec($url)
 }
 ```
 
-# 推荐 composer 扩展包
+## 推荐 composer 扩展包
 
 1. [smalls/video-tools](https://github.com/SMalls0098/video-tools)：短视频的拓展包，集成各大短视频的去水印功能

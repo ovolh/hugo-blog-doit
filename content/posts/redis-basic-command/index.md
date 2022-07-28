@@ -7,6 +7,7 @@ description: "redis 基础命令简单操作指南，方便以后查阅"
 tags: ["Redis"]
 featured_image: "redis.png"
 categories: ["Redis"]
+series: ["codding"]
 resources:
 - name: featured-image
   src: redis.png
@@ -17,11 +18,11 @@ resources:
 > 转载自：[finecho](https://learnku.com/blog/Lhao) 的 [Redis 基础学习](https://learnku.com/articles/24802)
 
 
-# 启动 && 连接
+## 启动 && 连接
 启动：`service redis-server start`
 连接：`redis-cli -h host -p port -a password`
 
-# 数据类型
+## 数据类型
 | 序号   | 数据类型                | 描述             |
 | ----  | ---------              | ----             |
 | 1     | string （字符串）       |            |
@@ -30,8 +31,8 @@ resources:
 | 4     | set （集合） | string 类型的无序集合，是通过哈希表实现的  |
 | 5     | zset （有序集合） | zset 和 set 一样也是 string 类型元素的集合，且不允许重复的成员 <br> 不同的是每个元素都会关联一个 double 类型的分数。<br>redis 正是通过分数来为集合中的成员进行从小到大的排序 <br>zset 的成员是唯一的，但分数 (score) 却可以重复     |
 
-# 操作指南
-## key 操作
+## 操作指南
+### key 操作
 ```redis
 -- SET KEY_NAME VALUE（设置给定 key 的值。如果 key 已经存储其他值， SET 就覆写旧值，且无视类型）
 > set name Lhao
@@ -106,7 +107,7 @@ resources:
 > type name // 输出：string
 ```
 
-## string 操作
+### string 操作
 ```redis
 > flushdb
 
@@ -179,7 +180,7 @@ resources:
 > get name // 输出：Lhaolove
 ```
 
-## hash 操作
+### hash 操作
 ```redis
 > flushdb
 
@@ -233,7 +234,7 @@ resources:
 2) "Lhao"
 ```
 
-## list 操作
+### list 操作
 ```redis
 > flushdb
 
@@ -316,7 +317,7 @@ resources:
 > lrange users 0 -1 // 输出：cherry、apple
 ```
 
-## set 操作
+### set 操作
 ```redis
 > flushdb
 
@@ -397,7 +398,7 @@ resources:
 )
 ```
 
-## zset 操作
+### zset 操作
 ```redis
  > flushdb
 

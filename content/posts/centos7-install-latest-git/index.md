@@ -6,6 +6,7 @@ draft: false
 description: "记录下在 CentOs 7 下编译安装最新版 Git 的过程"
 tags: ["Git"]
 categories: ["工具"]
+series: ["codding"]
 resources:
 - name: featured-image
   src: git.jpg

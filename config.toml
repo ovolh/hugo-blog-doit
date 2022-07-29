@@ -99,6 +99,14 @@ enableEmoji = true
 #        title = ""
 #        weight = 7
       [[languages.zh-cn.menu.main]]
+        identifier = "nav"
+        pre = ""
+        post = ""
+        name = "导航"
+        url = "https://nav.ovolh.com"
+        title = "nav"
+        weight = 7
+      [[languages.zh-cn.menu.main]]
         identifier = "link"
         pre = ""
         post = ""
